@@ -1,0 +1,38 @@
+.countries__data__container {
+  width: 80%;
+  margin: auto;
+}
+.countries__table__row {
+  height: 77px;
+}
+.countries__pagination {
+  background: #ffffff;
+  box-sizing: border-box;
+  margin: 5px 0;
+  padding: 5px 0;
+  display: flex;
+  justify-content: end;
+}
+.countries__header {
+  background: #ffffff;
+  padding: 20px 40px;
+  margin-bottom: 20px;
+}
+.countries__header__filter__select {
+  width: 100%;
+}
+.countries__header__filter__checkbox-container {
+  display: flex;
+  flex-direction: column;
+}
+.countries__header__clear-btn {
+  display: flex;
+  justify-content: end;
+}
+.country-modal__img {
+  display: flex;
+  justify-content: center;
+}
+.country-modal__img img {
+  width: 30%;
+}
