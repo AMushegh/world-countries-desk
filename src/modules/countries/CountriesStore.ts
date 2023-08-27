@@ -3,9 +3,9 @@ import { injectable, singleton } from "tsyringe";
 import StoreSlice from "../../utils/store/Slice";
 import Store, { SliceTypeGeneric } from "../../utils/store/Store";
 
-import { ICountry, ICountryDetails } from "./types";
+import { ICountry } from "./types";
 
-type InitialStateType = {
+type CounriesType = {
   countriesData: ICountry[];
   countriesFilteredData: ICountry[];
   selectedCountry: ICountry;
@@ -28,7 +28,7 @@ type InitialStateType = {
 @singleton()
 @injectable()
 export class CountriesStore implements StoreSlice {
-  private initialState: InitialStateType = {
+  private initialState: CounriesType = {
     countriesData: [],
     countriesFilteredData: [],
     selectedCountry: null,
@@ -48,7 +48,7 @@ export class CountriesStore implements StoreSlice {
     timezones: [],
   };
 
-  public data: SliceTypeGeneric<InitialStateType>;
+  public data: SliceTypeGeneric<CounriesType>;
 
   constructor(private store: Store) {
     this.data = store.createSlice("CountriesStore", this.initialState);
